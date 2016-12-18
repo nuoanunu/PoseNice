@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#999999"
+    android:orientation="vertical" >
+
+
+    <FrameLayout
+        android:id="@+id/camera_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/camera_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <SurfaceView
+            android:id="@+id/preview_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/capture_image_button"
+                android:background="@drawable/camerabtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/done_button"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/seekBar"
+                android:layout_alignStart="@+id/seekBar" />
+
+            <ImageView
+                android:id="@+id/camera_overlay_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mompose2"
+                android:layout_centerInParent="true"
+                android:cropToPadding="false"
+                android:longClickable="false"
+                android:scaleType="center"
+              />
+
+            <SeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"
+                android:rotation="-90"
+                android:paddingTop="10px"
+                android:paddingBottom="10px"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:minWidth="100dip"
+                android:maxWidth="560dip"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/capture_image_button"
+                android:layout_toStartOf="@+id/capture_image_button" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>
